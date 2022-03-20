@@ -1,0 +1,86 @@
+.footer-wrapper{
+    display: flex;
+    flex-direction: row;
+    min-width: 100vw;
+    justify-content: space-around;
+    padding: 2rem 2rem;
+    background-color: var(--primary-clr);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.footer-title{
+        background: linear-gradient(to right, #000000 0%, #575757 30%, #8f8f8f 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 1.2rem;
+}
+
+.footer.left-info, .footer.middle-left-info, .footer.middle-right-info, .footer.right-info{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 0.3rem;
+}
+
+.footer.left-info>h1, .footer.middle-left-info>h1, .footer.middle-right-info>h1, .footer.right-info>h1{
+    font-size: 0.7rem;
+}
+
+.footer.middle-left-info>li>a, .footer.middle-right-info>li>a{
+    color: var(--primary-bg);
+    font-size: 0.6rem;
+}
+.footer.middle-left-info>li>a:hover{
+    color: var(--primary-clr-hover);
+}
+
+.footer.middle-right-info>li>a:hover{
+    color: var(--primary-clr-hover);
+}
+
+.footer-creator{
+    margin-top: 2rem;
+    font-size: 0.5rem;
+}
+
+.footer-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 0.7rem;
+}
+.footer-icons>li>a{
+    color: var(--primary-bg);
+}
+.footer-icons>li>a:hover{
+    color: var(--primary-clr-hover);
+}
+
+.footer.right-info>li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.6rem;
+}
+.footer.right-info>li>p>span{
+    color: var(--primary-clr-hover);
+}
+.footer.right-info>li>a:hover{
+    color: var(--primary-clr);
+}
+.tagline{
+    margin-top: 2.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgb(130, 130, 130) 0%, rgb(50, 50, 50) 30%, rgb(0, 0, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.tagline:hover{
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0% , rgb(50, 50, 50) 50%, rgb(130, 130, 130) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
