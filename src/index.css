@@ -3,6 +3,7 @@
 @import url(./components/Home/Navbar/styles.css);
 @import url(./components/Home/Main/styles.css);
 @import url(./components/Home/Footer/styles.css);
+@import url(./pages/ProductListing/style.css);
 
 *,
 ::before,

@@ -47,7 +47,7 @@ export function Footer() {
                     </li>
                     <li>
                         <i class="fa fa-location"></i>
-                        <p>E-mail: <span>mail@wshoedog.com</span></p>
+                        <p>E-mail: <span>mail@shoedog.com</span></p>
                     </li>
                     <p class="tagline">Moving you More👟</p>
                 </div>
