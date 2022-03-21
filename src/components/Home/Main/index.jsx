@@ -13,7 +13,7 @@ export function Main() {
                     <h3>Save 10% on your first purchase.</h3>
                     <button>Shop Now</button>
                 </div>
-                <img className="top-section-image" src={require("./shoes.png")} alt="" />
+                <img className="top-section-image" src="/assets/shoes.png" alt="shoe" />
                 <i className="fa fa-angle-left"></i>
                 <i className="fa fa-angle-right"></i>
             </section>
@@ -22,31 +22,31 @@ export function Main() {
                 <h1>Featured Categories</h1>
                 <div className="feature-section-info">
                     <li className="feature-list">
-                        <img className="feature-img" src={require("./shoes.png")} alt="" />
+                        <img className="feature-img" src="/assets/shoes.png" alt="" />
                         <span className="feature-badge">Nike Air Force 1 Low</span>
                     </li>
                     <li className="feature-list">
-                        <img className="feature-img" src={require("./shoes.png")} alt="" />
+                        <img className="feature-img" src="/assets/shoes.png" alt="" />
                         <span className="feature-badge">Nike Air Max 270</span>
                     </li>
                     <li className="feature-list">
-                        <img className="feature-img" src={require("./shoes.png")} alt="" />
+                        <img className="feature-img" src="/assets/shoes.png" alt="" />
                         <span className="feature-badge">Nike VaporMax</span>
                     </li>
                     <li className="feature-list">
-                        <img className="feature-img" src={require("./shoes.png")} alt="" />
+                        <img className="feature-img" src="/assets/shoes.png" alt="" />
                         <span className="feature-badge">Nike Revolution 5</span>
                     </li>
                     <li className="feature-list">
-                        <img className="feature-img" src={require("./shoes.png")} alt="" />
+                        <img className="feature-img" src="/assets/shoes.png" alt="" />
                         <span className="feature-badge">Nike VaporMax Flyknit</span>
                     </li>
                     <li className="feature-list">
-                        <img className="feature-img" src={require("./shoes.png")} alt="" />
+                        <img className="feature-img" src="/assets/shoes.png" alt="" />
                         <span className="feature-badge">Jordan I High OG</span>
                     </li>
                     <li className="feature-list">
-                        <img className="feature-img" src={require("./shoes.png")} alt="" />
+                        <img className="feature-img" src="/assets/shoes.png" alt="" />
                         <span className="feature-badge">Nike Air Max 90</span>
                     </li>
                 </div>

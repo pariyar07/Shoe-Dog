@@ -6,7 +6,7 @@ export function HorizontalCard() {
             <section className="card-content horizontal-card-container">
                 <div className="card">
                     <div className="card-horizontal">
-                        <img className="card-img horizontal-img" src={require("../Main/shoes.png")} alt="shoe" />
+                        <img className="card-img horizontal-img" src='/assets/shoes.png' alt="shoe" />
                         <div className="card-info">
                             <div className="card-title">
                                 <div>
