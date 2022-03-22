@@ -1,13 +1,15 @@
 import React from 'react';
 import './index.css'
-import {Home} from "./pages/Home/index.jsx"
+import { SignUp } from './pages/Sign-Up/index.jsx';
+// import {Home} from "./pages/Home/index.jsx"
 // import {ProductListing} from "./pages/ProductListing/index.jsx"
 
 function App() {
   return (
     <div className="App">
-      <Home/>
+      {/* <Home/> */}
       {/* <ProductListing/> */}
+      <SignUp/>
     </div>
   );
 }
