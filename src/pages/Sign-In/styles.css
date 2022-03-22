@@ -1,0 +1,19 @@
+.keep-signed{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.keep-signed>p{
+    color: var(--primary-bg);
+}
+
+.forgot-password{
+    color: var(--primary-bg);
+    text-align: center;
+    margin-top: 1rem;
+}
+.forgot-password:hover{
+    color: var(--primary-clr-hover);
+}
