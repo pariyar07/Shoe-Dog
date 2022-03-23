@@ -1,6 +1,6 @@
 import React from 'react';
 import "../../../index"
-import { HorizontalCard } from "../common/horizontal-card"
+import { DealsCard } from "../common/deals-card"
 
 export function Main() {
     return (
@@ -55,10 +55,10 @@ export function Main() {
             <section className="card-section">
                 <h1>Deals of the Day</h1>
                 <div className="card-wrapper">
-                    <HorizontalCard />
-                    <HorizontalCard />
-                    <HorizontalCard />
-                    <HorizontalCard />
+                    <DealsCard />
+                    <DealsCard />
+                    <DealsCard />
+                    <DealsCard />
                 </div>
             </section>
         </main>

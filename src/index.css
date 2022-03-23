@@ -8,6 +8,7 @@
 @import url(./pages/Sign-In/styles.css);
 @import url(./pages/Logout/styles.css);
 @import url(./pages/Wishlist/styles.css);
+@import url(./pages/Cart/styles.css);
 
 *,
 ::before,

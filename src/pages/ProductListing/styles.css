@@ -201,38 +201,3 @@ input[type=radio] {
 .fas.fa-heart{
     cursor: pointer;
 }
-
-/* .card-badge{
-    position: absolute;
-    display: inline-block;
-    margin-top: 0.8rem;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: var(--badge-clr);
-    color:var(--primary-clr);
-    padding : 0.1rem 1rem;
-} */
-
-/* .horizontal-card-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card-horizontal{
-    display: flex;
-    flex-direction: row;
-    border-bottom: 2px solid var(--primary-clr-hover);
-    width: 550px;
-}
-
-.quantity{
-    margin-top: 1rem;
-} */
-
-/* .quantity>.minus,.add{
-    border: 1px solid var(--primary-clr-hover);
-    background: none;
-    padding: 0.3rem 0.5rem;
-    border-radius: 50%;
-} */
