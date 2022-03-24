@@ -9,10 +9,10 @@ export function ProductListing() {
     return (
         <>
             <Navbar />
-            <main class="listing-main-section">
+            <main className="listing-main-section">
                 <ProductNavbar/>
-                <section class="main-right-section">
-                    <div class="listing-card-section">
+                <section className="main-right-section">
+                    <div className="listing-card-section">
                         <VerticalCard/>
                         <VerticalCard/>
                         <VerticalCard/>
