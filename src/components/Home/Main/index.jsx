@@ -1,11 +1,10 @@
 import React from 'react';
-import { DealsCard } from "../common/deals-card"
-import {Banner } from "../common/main-banner"
+import { DealsCard } from "components/Home/common/deals-card"
+import { Banner } from "components/Home/common/main-banner"
 
 export function Main() {
     return (
         <main className="main-container">
-            {/* main banner */}
             <Banner/>
             {/* main feature-section */}
             <section className="main-container featured-section">

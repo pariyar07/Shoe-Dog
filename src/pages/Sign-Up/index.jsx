@@ -1,6 +1,6 @@
 import React from 'react';
-import {Navbar} from "../../components/Home/Navbar/index"
-import '../../../src/index.css'
+import {Navbar} from "components/Home/Navbar/index"
+import 'index.css'
 
 export function SignUp() {
     return (
