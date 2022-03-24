@@ -1,5 +1,4 @@
 import React from 'react';
-import "../../../index.css"
 
 export function Navbar() {
     return (
@@ -14,8 +13,9 @@ export function Navbar() {
                         <option value="">Sneakers</option>
                         <option value="">Formal Shoes</option>
                         <option value="">Trainers</option>
+                        <option value="">Cleats</option>
                     </select>
-                    <input type="search" placeholder="Search for an item..." id="search" />
+                    <input type="search" placeholder="Search for an item..." className="search" />
                     <a href="."><i className="fa fa-search"></i></a>
                 </div>
                 <ul className="nav-list">
