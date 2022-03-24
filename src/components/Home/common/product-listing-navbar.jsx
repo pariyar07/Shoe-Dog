@@ -30,32 +30,32 @@ export function ProductNavbar() {
                             <ul className="price-sort">
                                 <li>
                                     <input type="radio" id="sort-h2l" name="sort-selector" />
-                                    <label for="sort-h2l">Price - High to Low</label>
+                                    <label htmlFor="sort-h2l">Price - High to Low</label>
                                 </li>
                                 <li>
                                     <input type="radio" id="sort-l2h" name="sort-selector" />
-                                    <label for="sort-l2h">Price - Low to High</label>
+                                    <label htmlFor="sort-l2h">Price - Low to High</label>
                                 </li>
                             </ul>
                         </div>
                         <div className="rate-container">
-                            <h3>Rating</h3>
+                            <h3>Rating:</h3>
                             <ul className="product-rating">
                                 <li>
                                     <input type="radio" id="4star" name="star-selector" />
-                                    <label for="4star">4 Star & above</label>
+                                    <label htmlFor="4star">4 Star & above</label>
                                 </li>
                                 <li>
                                     <input type="radio" id="3star" name="star-selector" />
-                                    <label for="3star">3 Star & above</label>
+                                    <label htmlFor="3star">3 Star & above</label>
                                 </li>
                                 <li>
                                     <input type="radio" id="2star" name="star-selector" />
-                                    <label for="2star">2 Star & above</label>
+                                    <label htmlFor="2star">2 Star & above</label>
                                 </li>
                                 <li>
                                     <input type="radio" id="1star" name="star-selector" />
-                                    <label for="1star">1 Star & above</label>
+                                    <label htmlFor="1star">1 Star & above</label>
                                 </li>
                             </ul>
                         </div>

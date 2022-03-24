@@ -17,19 +17,19 @@ export function SignUp() {
                         </div>
                         <form id="form" className="form">
                             <div className="form-control">
-                                <label for="username">Username</label>
+                                <label htmlFor="username">Username</label>
                                 <input type="text" id="username" placeholder="Username" />
                             </div>
                             <div className="form-control">
-                                <label for="email">Email</label>
+                                <label htmlFor="email">Email</label>
                                 <input type="email" id="email" placeholder="Email" />
                             </div>
                             <div className="form-control">
-                                <label for="password">Password</label>
+                                <label htmlFor="password">Password</label>
                                 <input type="password" id="password" placeholder="Password" />
                             </div>
                             <div className="form-control">
-                                <label for="checkpassword">Check Password</label>
+                                <label htmlFor="checkpassword">Check Password</label>
                                 <input type="password" id="checkpassword" placeholder="Check Password" />
                             </div>
                             <div className="sign-up button-group">

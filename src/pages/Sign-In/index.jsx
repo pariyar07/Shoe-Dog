@@ -18,11 +18,11 @@ export function SignIn() {
                 </div>
                 <form id="form" className="form">
                     <div className="form-control">
-                        <label for="email">Email</label>
+                        <label htmlFor="email">Email</label>
                         <input type="email" id="email" placeholder="Email"/>
                     </div>
                     <div className="form-control">
-                        <label for="password">Password</label>
+                        <label htmlFor="password">Password</label>
                         <input type="password" id="password" placeholder="Password"/>
                     </div>
                     <div className="keep-signed">
