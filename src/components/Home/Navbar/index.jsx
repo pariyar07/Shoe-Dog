@@ -5,7 +5,7 @@ export function Navbar() {
         <>
             <nav className="navbar-content">
                 <a href=".">
-                    <h1 className="nav-title">Shoe Dog👟</h1>
+                    <img className="nav-title" src="assets/shoedog-logo.png" alt="logo"/>
                 </a>
                 <div className="nav-container-search">
                     <select>
