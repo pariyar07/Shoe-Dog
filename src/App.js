@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css'
-// import {Home} from "./pages/Home/index.jsx"
+import {Home} from "./pages/Home/index.jsx"
 // import {ProductListing} from "./pages/ProductListing/index.jsx"
 // import { SignUp } from './pages/Sign-Up/index.jsx';
 // import { SignIn } from './pages/Sign-In/index.jsx';

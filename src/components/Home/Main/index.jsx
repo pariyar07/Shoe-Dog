@@ -1,22 +1,12 @@
 import React from 'react';
-import "../../../index"
 import { DealsCard } from "../common/deals-card"
+import {Banner } from "../common/main-banner"
 
 export function Main() {
     return (
         <main className="main-container">
             {/* main banner */}
-            <section className="main-container top-section">
-                <div className="top-section-info">
-                    <h1>Limited Collection</h1>
-                    <h1>Big Discount</h1>
-                    <h3>Save 10% on your first purchase.</h3>
-                    <button>Shop Now</button>
-                </div>
-                <img className="top-section-image" src="/assets/shoes.png" alt="shoe" />
-                <i className="fa fa-angle-left"></i>
-                <i className="fa fa-angle-right"></i>
-            </section>
+            <Banner/>
             {/* main feature-section */}
             <section className="main-container featured-section">
                 <h1>Featured Categories</h1>
