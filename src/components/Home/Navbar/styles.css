@@ -11,8 +11,8 @@
 }
 
 .nav-title {
-    color: var(--primary-clr);
-    font-size: 2rem;
+    width: 60px;
+    height: 60px;
 }
 
 /* nav-search */
