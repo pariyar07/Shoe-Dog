@@ -11,6 +11,38 @@ export function Main() {
                 <div className="feature-section-info">
                     <li className="feature-list">
                         <img className="feature-img" src="/assets/shoes.png" alt="" />
+                        <span className="feature-badge">Sneakers</span>
+                    </li>
+                    <li className="feature-list">
+                        <img className="feature-img" src="/assets/shoes.png" alt="" />
+                        <span className="feature-badge">Formal Shoes</span>
+                    </li>
+                    <li className="feature-list">
+                        <img className="feature-img" src="/assets/shoes.png" alt="" />
+                        <span className="feature-badge">Trainers</span>
+                    </li>
+                    <li className="feature-list">
+                        <img className="feature-img" src="/assets/shoes.png" alt="" />
+                        <span className="feature-badge">Cleats</span>
+                    </li>
+                </div>
+            </section>
+            {/* main card-section */}
+            <section className="card-section">
+                <h1>Deals of the Day</h1>
+                <div className="card-wrapper">
+                    <HorizontalCard />
+                    <HorizontalCard />
+                    <HorizontalCard />
+                    <HorizontalCard />
+                </div>
+            </section>
+            {/* Featured Products */}
+            <section className="main-container featured-section">
+                <h1>Featured Products</h1>
+                <div className="feature-section-info">
+                    <li className="feature-list">
+                        <img className="feature-img" src="/assets/shoes.png" alt="" />
                         <span className="feature-badge">Nike Air Force 1 Low</span>
                     </li>
                     <li className="feature-list">
