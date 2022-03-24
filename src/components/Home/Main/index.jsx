@@ -1,6 +1,5 @@
 import React from 'react';
-import { DealsCard } from "components/Home/common/deals-card"
-import { Banner } from "components/Home/common/main-banner"
+import {DealsCard, Banner} from "fileModules"
 
 export function Main() {
     return (

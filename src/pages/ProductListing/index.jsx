@@ -1,9 +1,5 @@
 import React from 'react';
-import { Navbar } from 'components/Home/Navbar/index'
-import { Footer } from 'components/Home/Footer/index'
-import {VerticalCard} from 'components/Home/common/vertical-card'
-import {ProductNavbar} from 'components/Home/common/product-listing-navbar'
-import "index.css"
+import { Navbar, Footer, VerticalCard, ProductNavbar } from 'fileModules'
 
 export function ProductListing() {
     return (

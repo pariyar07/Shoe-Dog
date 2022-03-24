@@ -1,7 +1,5 @@
-
 import React from 'react';
-import {Navbar} from "components/Home/Navbar/index"
-import 'index.css'
+import {Navbar} from "fileModules"
 
 export function SignIn() {
     return (

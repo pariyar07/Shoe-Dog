@@ -1,8 +1,5 @@
 import React from 'react';
-import { Navbar } from 'components/Home/Navbar/index'
-import { Footer } from 'components/Home/Footer/index'
-import {VerticalCard} from 'components/Home/common/vertical-card'
-import 'index.css'
+import { Navbar, Footer, VerticalCard } from 'fileModules'
 
 export function Wishlist() {
     return (
@@ -15,8 +12,6 @@ export function Wishlist() {
             </div>
             <button className="remove-all">Remove All</button>
             <div className="wishlist-cards">
-                <VerticalCard/>
-                <VerticalCard/>
                 <VerticalCard/>
                 <VerticalCard/>
                 <VerticalCard/>

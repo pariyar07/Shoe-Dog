@@ -1,9 +1,5 @@
 import React from 'react';
-import { Navbar } from 'components/Home/Navbar/index'
-import { Footer } from 'components/Home/Footer/index'
-import { HorizontalCard } from 'components/Home/common/horizontal-card'
-import { CartNavbar} from "components/Home/common/cart-navbar"
-import 'index.css'
+import { Navbar, Footer, HorizontalCard, CartNavbar } from 'fileModules';
 
 export function Cart() {
     return (
