@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 export function Navbar() {
     return (
         <>
             <nav className="navbar-content">
                 <a href=".">
-                    <img className="nav-title" src="assets/shoedog-logo.png" alt="logo"/>
+                    <Link to="/home"><img className="nav-title" src="assets/shoedog-logo.png" alt="logo" /></Link>
                 </a>
                 <div className="nav-container-search">
                     <select>
@@ -20,25 +21,21 @@ export function Navbar() {
                 </div>
                 <ul className="nav-list">
                     <li>
-                        <a href="."><p>Store</p></a>
+                        <Link to="/product-listing"><p>Store</p></Link>
                     </li>
                     <li>
-                        <a href=".">
-                            <p>Wishlist</p>
+                            <Link to="/wishlist"><p>Wishlist</p></Link>
                             <div className="badge num-notification">
                                 <i className="fa fa-bell"></i>
                                 <span className="badge-notification-count">7</span>
                             </div>
-                        </a>
                     </li>
                     <li>
-                        <a href=".">
-                            <p>Cart</p>
+                            <Link to="/cart"><p>Cart</p></Link>
                             <div className="badge num-cart">
                                 <i className="fa fa-shopping-cart"></i>
                                 <span className="badge-cart-count">3</span>
                             </div>
-                        </a>
                     </li>
                     <li>
                         <div className="dropdown">
@@ -46,9 +43,9 @@ export function Navbar() {
                                 <i className="fa fa-caret-down"></i>
                             </button>
                             <div className="dropdown-content">
-                                <a href=".">Sign Up</a>
-                                <a href=".">Sign In</a>
-                                <a href=".">Log Out</a>
+                                <Link to="/signup">Sign Up</Link>
+                                <Link to="/signin">Sign In</Link>
+                                <Link to="/logout">Log Out</Link>
                             </div>
                         </div>
                     </li>
