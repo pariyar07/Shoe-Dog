@@ -162,8 +162,9 @@ input[type=radio] {
 .listing-card-section{
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 2rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* card */
