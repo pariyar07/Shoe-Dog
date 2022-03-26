@@ -1,5 +1,5 @@
 import React from 'react';
-import {DealsCard, Banner} from "fileModules"
+import {DealsCard, Banner, HorizontalCard} from "fileModules"
 
 export function Main() {
     return (

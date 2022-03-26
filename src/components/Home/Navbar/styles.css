@@ -83,7 +83,7 @@
     gap: 0.2rem;
 }
 
-.nav-list>li>p, .nav-list>li>a>p {
+.nav-list>li>a>p, .nav-list>li>p {
     color: var(--primary-clr);
     font-size: 1.2rem;
     cursor: pointer;
