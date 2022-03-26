@@ -1,5 +1,5 @@
 import React from 'react';
-import {DealsCard, Banner, HorizontalCard} from "fileModules"
+import { Banner, MainHorizontalCard, Laceless} from "fileModules"
 
 export function Main() {
     return (
@@ -31,10 +31,10 @@ export function Main() {
             <section className="card-section">
                 <h1>Deals of the Day</h1>
                 <div className="card-wrapper">
-                    <HorizontalCard />
-                    <HorizontalCard />
-                    <HorizontalCard />
-                    <HorizontalCard />
+                    <MainHorizontalCard />
+                    <MainHorizontalCard />
+                    <MainHorizontalCard />
+                    <MainHorizontalCard />
                 </div>
             </section>
             {/* Featured Products */}
@@ -73,12 +73,12 @@ export function Main() {
             </section>
             {/* main card-section */}
             <section className="card-section">
-                <h1>Deals of the Day</h1>
+                <h1>Laceless Sale</h1>
                 <div className="card-wrapper">
-                    <DealsCard />
-                    <DealsCard />
-                    <DealsCard />
-                    <DealsCard />
+                    <Laceless />
+                    <Laceless />
+                    <Laceless />
+                    <Laceless />
                 </div>
             </section>
         </main>
