@@ -13,7 +13,7 @@ export function Navbar() {
                         <option value="">All Category</option>
                         <option value="">Sneakers</option>
                         <option value="">Formal Shoes</option>
-                        <option value="">Trainers</option>
+                        <option value="">Slippers</option>
                         <option value="">Cleats</option>
                     </select>
                     <input type="search" placeholder="Search for an item..." className="search" />
