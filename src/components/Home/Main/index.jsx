@@ -19,7 +19,7 @@ export function Main() {
                     </li>
                     <li className="feature-list">
                         <img className="feature-img" src="/assets/shoes.png" alt="" />
-                        <span className="feature-badge">Trainers</span>
+                        <span className="feature-badge">Slippers</span>
                     </li>
                     <li className="feature-list">
                         <img className="feature-img" src="/assets/shoes.png" alt="" />
