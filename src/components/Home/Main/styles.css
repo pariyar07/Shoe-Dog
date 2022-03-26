@@ -47,6 +47,7 @@
     border-radius: 10px;
     transition: 0.5s;
     margin-bottom: 2rem;
+    cursor: pointer;
 }
 .top-section-info>button:hover{
     background: var(--primary-clr-hover);
@@ -60,19 +61,18 @@
     margin-right: 3rem;
 }
 
-.fa.fa-angle-left{
+.fa.fa-angle-left, .fa.fa-angle-right{
     display: inline-block;
     position: absolute;
-    left: 10px;
     font-size: 2.5rem;
     color: var(--primary-clr);
+    cursor: pointer;
 }
 .fa.fa-angle-right{
-    display: inline-block;
-    position: absolute;
     right: 10px;
-    font-size: 2.5rem;
-    color: var(--primary-clr);
+}
+.fa.fa-angle-left{
+    left: 10px;
 }
 
 .fa.fa-angle-left:hover, .fa.fa-angle-right:hover{
@@ -102,7 +102,7 @@
 .feature-section-info{
     display: flex;
     position: relative;
-    gap: 2rem;
+    gap: 3rem;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -110,6 +110,7 @@
     list-style: none;
     display: flex;
     position: relative;
+    cursor: pointer;
 }
 .feature-img{
     width: 250px;
@@ -247,5 +248,11 @@
 .card-horizontal{
     display: flex;
     flex-direction: row;
-    width: 550px;
+    width: auto;
+    cursor: pointer;
+}
+
+.card-img.laceless-img{
+    width: 350px;
+    height: auto;
 }
