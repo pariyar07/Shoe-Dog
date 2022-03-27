@@ -24,7 +24,7 @@ export function Footer() {
                     <h1>Categories</h1>
                     <li><a href=".">Sneaker</a></li>
                     <li><a href=".">Formal Shoes</a></li>
-                    <li><a href=".">Trainers</a></li>
+                    <li><a href=".">Slippers</a></li>
                     <li><a href=".">Cleats</a></li>
                 </div>
                 <div className="footer middle-right-info">

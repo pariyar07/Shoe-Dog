@@ -5,15 +5,13 @@ export function Navbar() {
     return (
         <>
             <nav className="navbar-content">
-                <a href=".">
                     <Link to="/home"><img className="nav-title" src="assets/shoedog-logo.png" alt="logo" /></Link>
-                </a>
                 <div className="nav-container-search">
                     <select>
                         <option value="">All Category</option>
                         <option value="">Sneakers</option>
                         <option value="">Formal Shoes</option>
-                        <option value="">Trainers</option>
+                        <option value="">Slippers</option>
                         <option value="">Cleats</option>
                     </select>
                     <input type="search" placeholder="Search for an item..." className="search" />

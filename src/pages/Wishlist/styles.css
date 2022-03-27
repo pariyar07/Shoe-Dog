@@ -48,3 +48,10 @@
     align-items: center;
     justify-content: center;
 }
+
+.wishlist-card-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
