@@ -5,7 +5,7 @@ export function VerticalCard() {
         <>
             <div className="listing-card">
                 <img className="card-img" src="/assets/shoes.png" alt="shoe" /> 
-                <div className="card-info">
+                <div className="wishlist-card-info">
                     <div className="card-title">
                         <div>
                             <h3>Nike Air Force 1</h3>

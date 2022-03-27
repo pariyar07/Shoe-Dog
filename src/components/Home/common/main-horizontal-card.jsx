@@ -5,7 +5,7 @@ export function MainHorizontalCard() {
         <>
             <div className="card">
                 <div className="card-horizontal">
-                    <img className="card-img horizontal-img" src="/assets/shoes.png" alt="shoe" />
+                    <img className="card-img horizontal-img" src="/assets/Sneakers/Sneaker3.png" alt="shoe" />
                     <div className="card-info">
                         <div className="card-title">
                             <div>
@@ -17,11 +17,6 @@ export function MainHorizontalCard() {
                             <p className="current-price">$500</p>
                             <p className="actual-price">$1000</p>
                             <p className="discount-percentage">(50% OFF)</p>
-                        </div>
-                        <div className="quantity">
-                            <button className="minus">-</button>
-                            <input className="count" type="number" value="1" />
-                            <button className="add">+</button>
                         </div>
                     </div>
                 </div>
