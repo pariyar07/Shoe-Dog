@@ -5,9 +5,7 @@ export function Navbar() {
     return (
         <>
             <nav className="navbar-content">
-                <a href=".">
                     <Link to="/home"><img className="nav-title" src="assets/shoedog-logo.png" alt="logo" /></Link>
-                </a>
                 <div className="nav-container-search">
                     <select>
                         <option value="">All Category</option>
