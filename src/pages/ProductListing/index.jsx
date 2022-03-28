@@ -14,7 +14,7 @@ export function ProductListing() {
                 <ProductNavbar />
                 <section className="main-right-section">
                     <div className="listing-card-section">
-                        {products.map(({ _id, image, name, info, price, actualPrice }) => 
+                        {products.map(({ _id, image, name, info, price, actualPrice, discount }) => 
                             <ProductCard
                                 key={_id}
                                 name={name}
@@ -22,6 +22,7 @@ export function ProductListing() {
                                 image={image}
                                 price={price}
                                 actualPrice={actualPrice}
+                                discount={discount}
                             />
                         )}
                     </div>

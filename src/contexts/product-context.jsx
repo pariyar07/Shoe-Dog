@@ -10,7 +10,7 @@ const ProductsProvider = ({ children }) => {
         (async () => {
             try {
                 const productData = await axios.get("/api/products");
-                return setProducts(productData.data.products)
+                setProducts(productData.data.products)
             } catch (error) {
                 console.error(error.message);
             }
