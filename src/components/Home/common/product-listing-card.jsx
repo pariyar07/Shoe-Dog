@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ProductCard({_id, image, name, info, price, actualPrice}) {
+function ProductCard({_id, image, name, info, price, actualPrice, discount}) {
     return (
         <>
             <div className="product-listing-card" key={_id}>
@@ -15,7 +15,7 @@ function ProductCard({_id, image, name, info, price, actualPrice}) {
                     <div className="price">
                         <p className="current-price">${price}</p>
                         <p className="actual-price">{actualPrice}</p>
-                        <p className="discount-percentage">(50% OFF)</p>
+                        <p className="discount-percentage">{discount}</p>
                     </div>
                 </div>
                 <div className="listing bottom-btn cart">
