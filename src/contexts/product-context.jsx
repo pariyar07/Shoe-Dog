@@ -1,24 +1,36 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useReducer, useEffect } from "react";
 import axios from "axios";
+import {productReducer} from 'contexts/product-reducer'
 
 const ProductsContext = createContext(null)
 
 const ProductsProvider = ({ children }) => {
-    const [products, setProducts] = useState([]);
+    const initialState = {
+        products: [],
+        cart: [],
+        wishlist: [],
+        error: null
+    }
 
-    useEffect(() => {
+    const getProducts = () => {
         (async () => {
             try {
                 const productData = await axios.get("/api/products");
-                setProducts(productData.data.products)
+                dispatch({ type: "SUCCESS", data: productData.data.products });
             } catch (error) {
                 console.error(error.message);
             }
-        })();
+        })()
+    }
+
+    useEffect(() => {
+        getProducts()
     }, []);
 
+    const [state, dispatch] = useReducer(productReducer, initialState);
+
     return (
-        <ProductsContext.Provider value={{ products, setProducts }}>
+        <ProductsContext.Provider value={{state, dispatch}}>
             {children}
         </ProductsContext.Provider>
     )

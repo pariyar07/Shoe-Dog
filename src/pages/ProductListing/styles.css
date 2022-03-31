@@ -136,11 +136,17 @@
 .rate-container>h3{
     font-size: 1.2rem;
 }
-.rate-container>ul{
-    font-size: 1.2rem;
-    padding: 0 0 0 0.8rem;
+.product-rating{
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.2rem;
+    padding: 0 1rem 0 1rem;
     color: var(--primary-clr);
 }
+.rating-stars{
+    cursor: pointer;
+}
+
 input[type=radio] {
     border: 0px;
     height: 1rem;

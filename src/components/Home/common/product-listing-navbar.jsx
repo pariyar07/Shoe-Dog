@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {Rating} from 'components/Home/common/cart-rating'
 
 export function ProductNavbar() {
+    const [rate, setRate] = useState(3)
     return (
         <>
             <aside className="aside-navbar">
@@ -41,22 +43,7 @@ export function ProductNavbar() {
                         <div className="rate-container">
                             <h3>Rating:</h3>
                             <ul className="product-rating">
-                                <li>
-                                    <input type="radio" id="4star" name="star-selector" />
-                                    <label htmlFor="4star">4 Star & above</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="3star" name="star-selector" />
-                                    <label htmlFor="3star">3 Star & above</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="2star" name="star-selector" />
-                                    <label htmlFor="2star">2 Star & above</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="1star" name="star-selector" />
-                                    <label htmlFor="1star">1 Star & above</label>
-                                </li>
+                                <Rating rating={rate}  onClick={(i) => setRate(i + 1)}/>
                             </ul>
                         </div>
                     </div>

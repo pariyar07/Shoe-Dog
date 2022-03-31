@@ -5,8 +5,7 @@ import ProductCard from 'components/Home/common/product-listing-card'
 
 
 export function ProductListing() {
-    const { products } = useProducts();
-
+    const { state: { products} } = useProducts();
     return (
         <>
             <Navbar />

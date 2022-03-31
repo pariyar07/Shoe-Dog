@@ -213,3 +213,11 @@ input::-webkit-inner-spin-button {
     background: linear-gradient(60deg, rgb(0, 0, 0) 0%, rgb(77, 77, 77) 20%, rgb(150, 150, 150) 100%);
     color: var(--primary-clr);
 }
+
+.card-img.horizontal-img{
+    float: center;
+    width:  230px;
+    height: 200px;
+    object-fit: scale-down;
+    padding: 0.5rem 0;
+}
