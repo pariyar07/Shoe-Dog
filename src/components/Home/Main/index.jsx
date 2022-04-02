@@ -1,7 +1,11 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+import { useProducts } from 'contexts/product-context'
 import { Banner, MainHorizontalCard, Laceless} from "fileModules"
 
 export function Main() {
+    const { filterDispatch } = useProducts()
+
     return (
         <main className="main-container">
             <Banner/>
@@ -9,22 +13,34 @@ export function Main() {
             <section className="main-container featured-section">
                 <h1>Featured Categories</h1>
                 <div className="feature-section-info">
-                    <li className="feature-list">
+                    <Link to="/product-listing" onClick={() => filterDispatch({
+                            type: "SORT_BY_CATEGORY",
+                            payload: "sneakers"
+                        })} className="feature-list">
                         <img className="feature-img" src="/assets/Sneakers/Sneaker1.png" alt="Sneaker" />
                         <span className="feature-badge">Sneakers</span>
-                    </li>
-                    <li className="feature-list">
+                    </Link>
+                    <Link to="/product-listing" onClick={() => filterDispatch({
+                            type: "SORT_BY_CATEGORY",
+                            payload: "formal-shoes"
+                        })} className="feature-list">
                         <img className="feature-img" src="/assets/FormalShoes/Formal1.png" alt="Formal Shoe" />
                         <span className="feature-badge">Formal Shoes</span>
-                    </li>
-                    <li className="feature-list">
+                    </Link>
+                    <Link to="/product-listing" onClick={() => filterDispatch({
+                            type: "SORT_BY_CATEGORY",
+                            payload: "slippers"
+                        })} className="feature-list">
                         <img className="feature-img" src="/assets/Slippers/Slipper3.png" alt="Slipper" />
                         <span className="feature-badge">Slippers</span>
-                    </li>
-                    <li className="feature-list">
+                    </Link>
+                    <Link to="/product-listing" onClick={() => filterDispatch({
+                            type: "SORT_BY_CATEGORY",
+                            payload: "cleats"
+                        })} className="feature-list">
                         <img className="feature-img" src="/assets/Cleats/Cleats5.png" alt="Football Boots" />
                         <span className="feature-badge">Cleats</span>
-                    </li>
+                    </Link>
                 </div>
             </section>
             {/* main card-section */}

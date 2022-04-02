@@ -4,7 +4,7 @@ import {useProducts} from 'contexts/product-context'
 
 
 export function Wishlist() {
-    const {state: {wishlist}, dispatch} = useProducts()
+    const {state: {wishlist}} = useProducts()
 
     return (
         <>

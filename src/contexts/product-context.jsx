@@ -1,6 +1,7 @@
 import { createContext, useContext, useReducer, useEffect } from "react";
 import axios from "axios";
 import {productReducer} from 'contexts/product-reducer'
+import {filterReducer} from 'contexts/filter-reducer'
 
 const ProductsContext = createContext(null)
 
@@ -28,9 +29,15 @@ const ProductsProvider = ({ children }) => {
     }, []);
 
     const [state, dispatch] = useReducer(productReducer, initialState);
+    const [filterState, filterDispatch] = useReducer(filterReducer, {
+        byRating: 0,
+        searchQuery: '',
+        categoryName: '',
+        byPriceRange: 0
+    });
 
     return (
-        <ProductsContext.Provider value={{state, dispatch}}>
+        <ProductsContext.Provider value={{state, dispatch, filterState, filterDispatch}}>
             {children}
         </ProductsContext.Provider>
     )

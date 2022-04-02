@@ -2,7 +2,7 @@ import React from 'react';
 import {useProducts} from 'contexts/product-context'
 
 export function VerticalCard() {
-    const {state: {wishlist}, dispatch} = useProducts()
+    const {state: {wishlist}} = useProducts()
     
     return (
         <>

@@ -1,8 +1,9 @@
 import React from 'react';
+import { AiFillStar } from 'react-icons/ai';
 import {useProducts} from 'contexts/product-context'
 
-function ProductCard({_id, image, name, info, price, actualPrice, discount}) {
-    const {state: {cart, wishlist}, dispatch} = useProducts();
+function ProductCard({_id, image, name, info, price, actualPrice, discount, ratings}) {
+    const {dispatch} = useProducts();
     return (
         <>
             <div className="product-listing-card" key={_id}>
@@ -18,6 +19,14 @@ function ProductCard({_id, image, name, info, price, actualPrice, discount}) {
                         <p className="current-price">${price}</p>
                         <p className="actual-price">{actualPrice}</p>
                         <p className="discount-percentage">{discount}</p>
+                    </div>
+                    <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            color: "var(--liked-clr)"
+                        }}>
+                        <AiFillStar/>
+                        <span >{ratings}/5</span>
                     </div>
                 </div>
                 <div className="listing bottom-btn cart">
