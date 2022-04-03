@@ -31,18 +31,20 @@ export function Navbar() {
                         <Link to="/product-listing"><p>Store</p></Link>
                     </li>
                     <li>
-                            <Link to="/wishlist"><p>Wishlist</p></Link>
+                            <Link to="/wishlist"><p>Wishlist</p>
                             <div className="badge num-notification">
                                 <i className="fa fa-bell"></i>
                                 <span className="badge-notification-count">{wishlist.length}</span>
                             </div>
+                            </Link>
                     </li>
                     <li>
-                            <Link to="/cart"><p>Cart</p></Link>
+                            <Link to="/cart"><p>Cart</p>
                             <div className="badge num-cart">
                                 <i className="fa fa-shopping-cart"></i>
                                 <span className="badge-cart-count">{cart.length}</span>
                             </div>
+                            </Link>
                     </li>
                     <li>
                         <div className="dropdown">

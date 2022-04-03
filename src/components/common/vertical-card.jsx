@@ -23,7 +23,7 @@ export function VerticalCard() {
                     </div>
                 </div>
                 <div className="bottom-btn cart">
-                    <button className="btn default add-cart">Add to Cart</button>
+                    <button className="btn default add-cart">Move to Cart</button>
                     <button className="btn default remove-wishlist">Remove</button>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Footer, ProductNavbar } from 'fileModules'
 import { useProducts } from 'contexts/product-context';
-import ProductCard from 'components/Home/common/product-listing-card'
+import ProductCard from 'components/common/product-listing-card'
 
 
 export function ProductListing() {

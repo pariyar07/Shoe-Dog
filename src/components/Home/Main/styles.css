@@ -39,7 +39,7 @@
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
 }
-.top-section-info>button{
+.top-section-info>a>button{
     font-size: 2rem;
     width: 250px;
     padding: 0.5rem 0;
@@ -49,7 +49,7 @@
     margin-bottom: 2rem;
     cursor: pointer;
 }
-.top-section-info>button:hover{
+.top-section-info>a>button:hover{
     background: var(--primary-clr-hover);
     color: var(--primary-clr);
 }
@@ -113,8 +113,9 @@
     cursor: pointer;
 }
 .feature-img{
-    width: 250px;
+    width: 200px;
     overflow: hidden;
+    margin: 0.3rem
 }
 .feature-badge{
     font-size: 1.5rem;

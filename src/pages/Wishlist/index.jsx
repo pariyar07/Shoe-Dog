@@ -3,8 +3,8 @@ import { Navbar, Footer, VerticalCard } from 'fileModules'
 import {useProducts} from 'contexts/product-context'
 
 
-export function Wishlist() {
-    const {state: {wishlist}} = useProducts()
+export function Wishlist({ _id, image, name, info, price, actualPrice, discount }) {
+    const {state: {wishlist}, dispatch} = useProducts()
 
     return (
         <>
@@ -14,7 +14,10 @@ export function Wishlist() {
                 <h1>Wishlist</h1>
                 <p>You have {wishlist.length} items in your wishlist</p>
             </div>
-            <button className="remove-all">Remove All</button>
+            <button
+            onClick={() => {
+                        dispatch({ type: "REMOVE_FROM_WISHLIST", payload: { _id, image, name, info, price, actualPrice, discount } })
+                    }} className="wishlist remove-all">Remove All</button>
             <div className="wishlist-cards">
             {
                             wishlist.length > 0 ? (<VerticalCard/>) : (

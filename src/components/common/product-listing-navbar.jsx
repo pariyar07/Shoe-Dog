@@ -1,5 +1,5 @@
 import React from 'react';
-import { Rating } from 'components/Home/common/cart-rating'
+import { Rating } from 'components/common/cart-rating'
 import { useProducts } from 'contexts/product-context'
 
 export function ProductNavbar() {

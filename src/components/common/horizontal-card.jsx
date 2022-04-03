@@ -30,12 +30,12 @@ export function HorizontalCard() {
                             <button className="add">+</button>
                         </div>
                     </div>
-                    <div className="card-buttons">
+                    <div className="wishlist card-buttons">
                         <button onClick={() => {
                             dispatch({type: "REMOVE_FROM_CART", payload: {prod}})
                         }}
                         className="remove-btn">REMOVE</button>
-                        <button className="wishlist-btn">Add to Wishlist</button>
+                        <button className="wishlist-btn">Move to Wishlist</button>
                     </div>
                 </div>
             </div>
