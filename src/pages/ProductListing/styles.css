@@ -37,20 +37,20 @@
     gap: 0.5rem;
 }
 
-.product-categories-list>li {
+.product-categories-list>button {
+    font-size: 1.2rem;
     padding: 0.5rem 0.8rem 0.5rem 0.8rem;
     border-radius: 8px;
     margin: 0 1rem 0.2rem 1rem;
+    color: var(--primary-clr);
     background: var(--primary-clr-hover);
     transition: 0.5s;
+    border: none;
+    cursor: pointer;
 }
-.product-categories-list>li:hover{
-    background: none;
-}
-
-.product-categories-list>li>a{
+.product-categories-list>button:hover{
     color: var(--primary-clr);
-    font-size: 1.2rem;
+    background: none;
 }
 
 /* filter */
@@ -72,7 +72,9 @@
     padding: 0.3rem 0.5rem;
     border-radius: 8px;
     font-size: 1rem;
+    cursor: pointer;
     transition: 0.5s;
+    border: none;
 }
 
 .filter-badge:hover {
@@ -126,6 +128,9 @@
     padding: 0 0 0 0.8rem;
     color: var(--primary-clr);
 }
+.price-sort>li>input, .price-sort>li>label{
+    cursor: pointer;
+}
 
 /* rate */
 .rate-container{
@@ -170,6 +175,7 @@ input[type=radio] {
     flex-direction: row;
     gap: 2rem;
     flex-wrap: wrap;
+    height: 100vh;
     justify-content: center;
 }
 
@@ -189,6 +195,7 @@ input[type=radio] {
     border-radius: 0.8rem;
     align-items: center;
     justify-content: space-between;
+    height: 430px;
 }
 
 .card-title>div{

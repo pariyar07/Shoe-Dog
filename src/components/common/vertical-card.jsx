@@ -2,7 +2,7 @@ import React from 'react';
 import {useProducts} from 'contexts/product-context'
 
 export function VerticalCard() {
-    const {state: {wishlist}, dispatch} = useProducts()
+    const {state: {wishlist}} = useProducts()
     
     return (
         <>
@@ -23,7 +23,7 @@ export function VerticalCard() {
                     </div>
                 </div>
                 <div className="bottom-btn cart">
-                    <button className="btn default add-cart">Add to Cart</button>
+                    <button className="btn default add-cart">Move to Cart</button>
                     <button className="btn default remove-wishlist">Remove</button>
                 </div>
             </div>

@@ -3,20 +3,27 @@ import { Link } from "react-router-dom";
 import {useProducts} from 'contexts/product-context'
 
 export function Navbar() {
-    const {state: {cart, wishlist}} = useProducts()
+    const {state: {cart, wishlist}, filterDispatch} = useProducts()
     return (
         <>
             <nav className="navbar-content">
                     <Link to="/home"><img className="nav-title" src="assets/shoedog-logo.png" alt="logo" /></Link>
                 <div className="nav-container-search">
                     <select>
-                        <option value="">All Category</option>
-                        <option value="">Sneakers</option>
-                        <option value="">Formal Shoes</option>
-                        <option value="">Slippers</option>
-                        <option value="">Cleats</option>
+                        <option>All Category</option>
+                        <option>Sneakers</option>
+                        <option>Formal Shoes</option>
+                        <option>Slippers</option>
+                        <option>Cleats</option>
                     </select>
-                    <input type="search" placeholder="Search for an item..." className="search" />
+                    <input type="search" placeholder="Search for an item..." className="search" onChange={
+                        (e) => {
+                            filterDispatch({
+                                type: "FILTER_BY_SEARCH",
+                                payload: e.target.value
+                            })
+                        }
+                    }/>
                     <a href="."><i className="fa fa-search"></i></a>
                 </div>
                 <ul className="nav-list">
@@ -24,18 +31,20 @@ export function Navbar() {
                         <Link to="/product-listing"><p>Store</p></Link>
                     </li>
                     <li>
-                            <Link to="/wishlist"><p>Wishlist</p></Link>
+                            <Link to="/wishlist"><p>Wishlist</p>
                             <div className="badge num-notification">
                                 <i className="fa fa-bell"></i>
                                 <span className="badge-notification-count">{wishlist.length}</span>
                             </div>
+                            </Link>
                     </li>
                     <li>
-                            <Link to="/cart"><p>Cart</p></Link>
+                            <Link to="/cart"><p>Cart</p>
                             <div className="badge num-cart">
                                 <i className="fa fa-shopping-cart"></i>
                                 <span className="badge-cart-count">{cart.length}</span>
                             </div>
+                            </Link>
                     </li>
                     <li>
                         <div className="dropdown">

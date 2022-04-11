@@ -23,7 +23,7 @@
     font-size: 1.2rem;
 }
 
-.remove-all{
+.wishlist.remove-all{
     border: none;
     background: var(--primary-clr);
     color: var(--primary-bg);
@@ -31,7 +31,7 @@
     font-size: 1rem;
     border-radius: 0.5rem;
     position: absolute;
-    top: 7rem;
+    top: 8rem;
     right: 7rem;
     transition: 0.5s;
 }

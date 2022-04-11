@@ -45,6 +45,10 @@
 
 .search{
     width: 100%;
+    padding-right: 0.5rem;
+}
+.search::-webkit-search-cancel-button{
+    -webkit-appearance: none;   
 }
 
 .nav-container-search>a>i{

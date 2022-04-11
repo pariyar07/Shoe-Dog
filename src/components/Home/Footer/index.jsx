@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { useProducts } from 'contexts/product-context'
+
 
 export function Footer() {
+    const { filterDispatch } = useProducts()
     return (
         <>
             <footer className="footer-wrapper">
@@ -22,10 +25,22 @@ export function Footer() {
                 </div>
                 <div className="footer middle-left-info">
                     <h1>Categories</h1>
-                    <li><a href=".">Sneaker</a></li>
-                    <li><a href=".">Formal Shoes</a></li>
-                    <li><a href=".">Slippers</a></li>
-                    <li><a href=".">Cleats</a></li>
+                    <li><Link to="/product-listing" onClick={() => filterDispatch({
+                            type: "SORT_BY_CATEGORY",
+                            payload: "sneakers"
+                        })}>Sneaker</Link></li>
+                    <li><Link to="/product-listing" onClick={() => filterDispatch({
+                            type: "SORT_BY_CATEGORY",
+                            payload: "formal-shoes"
+                        })} href=".">Formal Shoes</Link></li>
+                    <li><Link to="/product-listing" onClick={() => filterDispatch({
+                            type: "SORT_BY_CATEGORY",
+                            payload: "slippers"
+                        })} href=".">Slippers</Link></li>
+                    <li><Link to="/product-listing" onClick={() => filterDispatch({
+                            type: "SORT_BY_CATEGORY",
+                            payload: "cleats"
+                        })} href=".">Cleats</Link></li>
                 </div>
                 <div className="footer middle-right-info">
                     <h1>Account</h1>

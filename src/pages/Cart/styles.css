@@ -69,19 +69,20 @@
     margin-left: 2rem;
 }
 
-.card-buttons{
+.wishlist.card-buttons{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin: 1rem 2rem 1rem 0;
+    min-width: 12rem;
 }
 .remove-btn, .wishlist-btn{
-    width: 8rem;
-    padding: 0.3rem 0.8rem;
+    /* width: 8rem; */
+    padding: 0.6rem 0.8rem;
     border: none;
     border-radius: 10px;
     transition: 0.5s;
-    font-size: 1rem;
+    font-size: 1.1rem;
     cursor: pointer;
 }
 .remove-btn:hover{
