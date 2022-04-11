@@ -25,7 +25,7 @@ export function Cart({_id, image, name, info, price, actualPrice, discount}) {
                                 <h1 style={{
                                     margin: "auto",
                                     color: "white",
-                                    fontSize: "2.5rem"}}>Cart is empty 😂</h1>
+                                    fontSize: "2.5rem"}}>Cart is empty 😢</h1>
                                 <img 
                                 src="/assets/empty-cart.png" 
                                 alt="shoe"

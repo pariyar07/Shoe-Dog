@@ -2,7 +2,7 @@ import React from 'react';
 import {useProducts} from 'contexts/product-context'
 
 function ProductCard({_id, image, name, info, price, actualPrice, discount}) {
-    const {state: {cart}, dispatch} = useProducts();
+    const {state: {cart, wishlist}, dispatch} = useProducts();
     return (
         <>
             <div className="product-listing-card" key={_id}>
@@ -24,7 +24,9 @@ function ProductCard({_id, image, name, info, price, actualPrice, discount}) {
                     <button onClick={() => {
                         dispatch({type: "ADD_TO_CART", payload: {_id, image, name, info, price, actualPrice, discount}})
                     }} className="btn default add-cart">Add to Cart</button>
-                    <button className="btn default add-wishlist">Add to Wishlist</button>
+                    <button onClick={() => {
+                        dispatch({type: "ADD_TO_WISHLIST", payload: {_id, image, name, info, price, actualPrice, discount}})
+                    }} className="btn default add-wishlist">Add to Wishlist</button>
                 </div>
             </div>
         </>

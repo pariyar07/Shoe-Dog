@@ -31,7 +31,7 @@ export function CartNavbar() {
                         </li>
                         <li>
                             <p>Discount %</p>
-                            <span>50%</span>
+                            <span>{cart.length === 0 ? ("--") : ("50%")}</span>
                         </li>
                         <li>
                             <p>Coupon Discount</p>

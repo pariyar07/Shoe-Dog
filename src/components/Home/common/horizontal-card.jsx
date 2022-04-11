@@ -2,7 +2,7 @@ import React from 'react';
 import {useProducts} from 'contexts/product-context'
 
 
-export function HorizontalCard({}) {
+export function HorizontalCard() {
     const {state: {cart}, dispatch} = useProducts()
 
     return (

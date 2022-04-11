@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {useProducts} from 'contexts/product-context'
 
 export function Navbar() {
-    const {state: {cart}} = useProducts()
+    const {state: {cart, wishlist}} = useProducts()
     return (
         <>
             <nav className="navbar-content">
@@ -27,7 +27,7 @@ export function Navbar() {
                             <Link to="/wishlist"><p>Wishlist</p></Link>
                             <div className="badge num-notification">
                                 <i className="fa fa-bell"></i>
-                                <span className="badge-notification-count">7</span>
+                                <span className="badge-notification-count">{wishlist.length}</span>
                             </div>
                     </li>
                     <li>

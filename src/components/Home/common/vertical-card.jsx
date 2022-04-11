@@ -1,21 +1,25 @@
 import React from 'react';
+import {useProducts} from 'contexts/product-context'
 
 export function VerticalCard() {
+    const {state: {wishlist}, dispatch} = useProducts()
+    
     return (
         <>
+        {wishlist.map((prod) => (
             <div className="listing-card">
-                <img className="card-img" src="/assets/shoes.png" alt="shoe" /> 
+                <img className="card-img vertical-card-img" src={prod.image} alt="shoe" /> 
                 <div className="wishlist-card-info">
                     <div className="card-title">
                         <div>
-                            <h3>Nike Air Force 1</h3>
-                            <p className="card-description">A power that Runs you.</p>
+                            <h3>{prod.name}</h3>
+                            <p className="card-description">{prod.info}</p>
                         </div>
                     </div>
                     <div className="price">
-                        <p className="current-price">$500</p>
-                        <p className="actual-price">$1000</p>
-                        <p className="discount-percentage">(50% OFF)</p>
+                        <p className="current-price">{prod.price}</p>
+                        <p className="actual-price">{prod.actualPrice}</p>
+                        <p className="discount-percentage">{prod.discount}</p>
                     </div>
                 </div>
                 <div className="bottom-btn cart">
@@ -23,6 +27,8 @@ export function VerticalCard() {
                     <button className="btn default remove-wishlist">Remove</button>
                 </div>
             </div>
+        ))}
+            
         </>
     );
 }
