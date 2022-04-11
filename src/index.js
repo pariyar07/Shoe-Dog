@@ -9,9 +9,14 @@ import { SignIn } from 'pages/Sign-In/index.jsx';
 import { Logout } from 'pages/Logout/index.jsx';
 import { Wishlist } from 'pages/Wishlist/index.jsx';
 import { Cart } from 'pages/Cart/index.jsx';
+import {makeServer} from './server'
+import {ProductsProvider} from 'contexts/product-context'
+
+makeServer()
 
 ReactDOM.render(
   <React.StrictMode>
+  <ProductsProvider>
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
@@ -24,6 +29,7 @@ ReactDOM.render(
       <Route path="/logout" element={<Logout />} />
     </Routes>
   </BrowserRouter>
+  </ProductsProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

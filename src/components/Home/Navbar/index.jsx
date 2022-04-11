@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import {useProducts} from 'contexts/product-context'
 
 export function Navbar() {
+    const {state: {cart}} = useProducts()
     return (
         <>
             <nav className="navbar-content">
@@ -32,7 +34,7 @@ export function Navbar() {
                             <Link to="/cart"><p>Cart</p></Link>
                             <div className="badge num-cart">
                                 <i className="fa fa-shopping-cart"></i>
-                                <span className="badge-cart-count">3</span>
+                                <span className="badge-cart-count">{cart.length}</span>
                             </div>
                     </li>
                     <li>

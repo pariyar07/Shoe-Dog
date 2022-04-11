@@ -31,7 +31,7 @@ export function SignIn() {
                         <button id="sign-btn">Sign-In</button>
                         <a href="./sign-up.html"><button id="sign-btn">Sign-Up <i className="fas fa-chevron-right"></i></button></a>
                     </div>
-                    <a><p className="forgot-password">Forgot Password?</p></a>
+                    <a href="."><p className="forgot-password">Forgot Password?</p></a>
                 </form>
             </div>
         </div>

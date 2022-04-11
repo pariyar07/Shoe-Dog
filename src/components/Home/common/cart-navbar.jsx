@@ -1,6 +1,16 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import {useProducts} from 'contexts/product-context'
 
 export function CartNavbar() {
+    const {state: {cart}} = useProducts()
+    const [total, setTotal] = useState()
+    const [priceTotal, setPriceTotal] = useState()
+
+    useEffect(() => {
+        setTotal(cart.reduce((acc, curr) => acc + Number(curr.price), 0))
+        setPriceTotal(cart.reduce((acc, curr) => acc + Number(curr.actualPrice), 0))
+    }, [cart])
+
     return (
         <>
             <aside className="cart-navbar">
@@ -13,11 +23,11 @@ export function CartNavbar() {
                     <div className="price-details-categories">
                         <li>
                             <p>Price</p>
-                            <span>$1000</span>
+                            <span>${priceTotal}</span>
                         </li>
                         <li>
                             <p>Discount</p>
-                            <span>$500</span>
+                            <span>${priceTotal - total}</span>
                         </li>
                         <li>
                             <p>Discount %</p>
@@ -35,7 +45,7 @@ export function CartNavbar() {
                 </div>
                 <div className="total-price">
                     <h3>Total</h3>
-                    <h3>$500</h3>
+                    <h3>${total}</h3>
                 </div>
                 <button className="buy-btn">Ready to Take Off</button>
             </aside>
