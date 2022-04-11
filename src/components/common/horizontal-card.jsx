@@ -31,10 +31,10 @@ export function HorizontalCard() {
                         </div>
                     </div>
                     <div className="wishlist card-buttons">
-                        <button onClick={() => {
+                        {/* <button onClick={() => {
                             dispatch({type: "REMOVE_FROM_CART", payload: {prod}})
                         }}
-                        className="remove-btn">REMOVE</button>
+                        className="remove-btn">REMOVE</button> */}
                         <button className="wishlist-btn">Move to Wishlist</button>
                     </div>
                 </div>
