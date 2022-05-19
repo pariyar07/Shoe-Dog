@@ -1,9 +1,9 @@
-import React from 'react';
 import { Navbar, Footer, HorizontalCard, CartNavbar } from 'fileModules';
 import { useProducts } from 'contexts/product-context'
 
 export function Cart() {
-    const { state: { cart }, dispatch } = useProducts()
+    const { state: { cart }, dispatch } = useProducts();
+    console.log(cart)
 
     return (
         <>
@@ -15,7 +15,7 @@ export function Cart() {
                         <h3>{cart.length} items in basket</h3>
                     </div>
                     <button onClick={() => {
-                        dispatch({ type: "CLEAR_CART", payload: {} })
+                        dispatch({ type: "CLEAR_CART", payload: {} });
                     }}
                         className="remove-all">Remove All</button>
                     <div className="cart-card-container">
@@ -39,7 +39,7 @@ export function Cart() {
                         }
                     </div>
                 </section>
-                <CartNavbar />
+                <CartNavbar/>
             </main>
             <Footer />
         </>

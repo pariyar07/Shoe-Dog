@@ -35,11 +35,11 @@ export const productReducer = (state, action) => {
         }
         case 'CLEAR_CART':{
             return {
-                ...state, cart: action.payload
+                ...state, cart: []
             }
         }case 'CLEAR_WISHLIST':{
             return {
-                ...state, wishlist: action.payload
+                ...state, wishlist: []
             }
         }
         case "CHANGE_QTY": {
