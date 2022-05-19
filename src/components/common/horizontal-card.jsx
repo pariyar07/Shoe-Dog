@@ -1,44 +1,38 @@
-import React from 'react';
+import {useState} from 'react';
 import {useProducts} from 'contexts/product-context'
 
-
 export function HorizontalCard() {
+    const [quantity, setQuantity] = useState(1)
     const {state: {cart}, dispatch} = useProducts()
 
     return (
         <>
         {
-            cart.map((prod) => (
-                <div className="card">
-                <div className="card-horizontal">
-                    <img className="card-img horizontal-img" src={prod.image} alt="shoe" />
+            cart.map((product) => (
+                <div className="horizontal-card" key={product._id}>
+                    <img className="card-img -img" src={product.image} alt="shoe" />
                     <div className="card-info">
                         <div className="card-title">
                             <div>
-                                <h3>{prod.name}</h3>
-                                <p className="card-description">{prod.info}</p>
+                                <h3>{product.name}</h3>
+                                <p className="card-description">{product.info}</p>
                             </div>
                         </div>
                         <div className="price">
-                            <p className="current-price">{prod.price}</p>
-                            <p className="actual-price">{prod.actualPrice}</p>
-                            <p className="discount-percentage">{prod.discount}</p>
+                            <p className="current-price">{product.price}</p>
+                            <p className="actual-price">{product.actualPrice}</p>
+                            <p className="discount-percentage">{product.discount}</p>
                         </div>
                         <div className="quantity">
                             <button className="minus">-</button>
-                            <input className="count" type="number" value={prod.qty} />
+                            <input className="count" type="number" value={quantity} readOnly/>
                             <button className="add">+</button>
                         </div>
                     </div>
                     <div className="wishlist card-buttons">
-                        {/* <button onClick={() => {
-                            dispatch({type: "REMOVE_FROM_CART", payload: {prod}})
-                        }}
-                        className="remove-btn">REMOVE</button> */}
-                        <button className="wishlist-btn">Move to Wishlist</button>
+                        <button className="wishlist-btn" onClick={() => dispatch({type: "MOVE_TO_WISHLIST", payload: product})}>Move to Wishlist</button>
                     </div>
                 </div>
-            </div>
             ))
         }
         </>

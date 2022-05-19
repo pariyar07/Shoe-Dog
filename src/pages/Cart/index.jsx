@@ -2,10 +2,9 @@ import React from 'react';
 import { Navbar, Footer, HorizontalCard, CartNavbar } from 'fileModules';
 import { useProducts } from 'contexts/product-context'
 
-export function Cart({ _id, image, name, info, price, actualPrice, discount }) {
+export function Cart() {
     const { state: { cart }, dispatch } = useProducts()
 
-    
     return (
         <>
             <Navbar />
@@ -16,7 +15,7 @@ export function Cart({ _id, image, name, info, price, actualPrice, discount }) {
                         <h3>{cart.length} items in basket</h3>
                     </div>
                     <button onClick={() => {
-                        dispatch({ type: "REMOVE_FROM_CART", payload: { _id, image, name, info, price, actualPrice, discount } })
+                        dispatch({ type: "CLEAR_CART", payload: {} })
                     }}
                         className="remove-all">Remove All</button>
                     <div className="cart-card-container">

@@ -44,17 +44,8 @@ export function ProductListing() {
                 <ProductNavbar />
                 <section className="main-right-section">
                     <div className="listing-card-section">
-                        {transformProducts().map(({ _id, image, name, info, price, actualPrice, discount, ratings}) => 
-                            <ProductCard
-                                key={_id}
-                                name={name}
-                                info={info}
-                                image={image}
-                                price={price}
-                                actualPrice={actualPrice}
-                                discount={discount}
-                                ratings={ratings}
-                            />
+                        {transformProducts().map((product) => 
+                            <ProductCard product={product} key={product._id}/>
                         )}
                     </div>
                 </section>

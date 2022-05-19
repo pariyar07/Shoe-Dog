@@ -13,21 +13,33 @@ export const productReducer = (state, action) => {
         }
         case 'ADD_TO_CART':{
             return {
-                ...state, cart: [...state.cart, {...action.payload, qty: 1}]
+                ...state, cart: [...state.cart, {...action.payload}]
+            }
+        }
+        case 'MOVE_TO_CART':{
+            return {
+                ...state, cart: [...state.cart, {...action.payload}],
+                wishlist: state.wishlist.filter((c) => c._id !== action.payload._id)
             }
         }
         case 'ADD_TO_WISHLIST':{
             return {
-                ...state, wishlist: [...state.wishlist, {...action.payload, qty: 1}]
+                ...state, wishlist: [...state.wishlist, {...action.payload}]
             }
         }
-        case 'REMOVE_FROM_CART':{
+        case 'MOVE_TO_WISHLIST':{
             return {
-                ...state, cart: state.cart.filter((c) => c._id !== action.payload._id)
+                ...state, wishlist: [...state.wishlist, {...action.payload}],
+                cart: state.cart.filter((c) => c._id !== action.payload._id)
             }
-        }case 'REMOVE_FROM_WISHLIST':{
+        }
+        case 'CLEAR_CART':{
             return {
-                ...state, wishlist: state.wishlist.filter((c) => c._id !== action.payload._id)
+                ...state, cart: action.payload
+            }
+        }case 'CLEAR_WISHLIST':{
+            return {
+                ...state, wishlist: action.payload
             }
         }
         case "CHANGE_QTY": {
