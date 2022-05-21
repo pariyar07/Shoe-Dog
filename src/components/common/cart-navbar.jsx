@@ -8,7 +8,7 @@ export function CartNavbar() {
 
     useEffect(() => {
         setPrice(cart.reduce((acc, curr) => acc + Number(curr.actualPrice), 0));
-        setTotal(cart.reduce((acc, curr) => acc + Number(curr.price), 0));
+        setTotal(cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0));
     }, [cart])
 
     return (

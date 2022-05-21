@@ -1,9 +1,8 @@
-import React from 'react';
 import { AiFillStar } from 'react-icons/ai';
-import {useProducts} from 'contexts/product-context'
+
+import ProductListingButton from 'components/common/productListingButton'
 
 function ProductCard({product}) {
-    const {dispatch} = useProducts();
     return (
         <>
             <div className="product-listing-card">
@@ -30,12 +29,7 @@ function ProductCard({product}) {
                     </div>
                 </div>
                 <div className="listing bottom-btn cart">
-                    <button onClick={() => {
-                        dispatch({type: "ADD_TO_CART", payload: product})
-                    }} className="btn default add-cart">Add to Cart</button>
-                    <button onClick={() => {
-                        dispatch({type: "ADD_TO_WISHLIST", payload: product})
-                    }} className="btn default add-wishlist">Add to Wishlist</button>
+                    <ProductListingButton product={product}/>
                 </div>
             </div>
         </>

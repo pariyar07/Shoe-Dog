@@ -3,7 +3,6 @@ import { useProducts } from 'contexts/product-context'
 
 export function Cart() {
     const { state: { cart }, dispatch } = useProducts();
-    console.log(cart)
 
     return (
         <>
