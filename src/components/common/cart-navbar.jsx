@@ -1,14 +1,14 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from "react"
 import {useProducts} from 'contexts/product-context'
 
 export function CartNavbar() {
-    const {state: {cart}} = useProducts()
-    const [total, setTotal] = useState()
-    const [priceTotal, setPriceTotal] = useState()
+    const {state: {cart}} = useProducts();
+    const [price, setPrice] = useState();
+    const [total, setTotal] = useState();
 
     useEffect(() => {
-        setTotal(cart.reduce((acc, curr) => acc + Number(curr.price), 0))
-        setPriceTotal(cart.reduce((acc, curr) => acc + Number(curr.actualPrice), 0))
+        setPrice(cart.reduce((acc, curr) => acc + Number(curr.actualPrice), 0));
+        setTotal(cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0));
     }, [cart])
 
     return (
@@ -23,11 +23,11 @@ export function CartNavbar() {
                     <div className="price-details-categories">
                         <li>
                             <p>Price</p>
-                            <span>${priceTotal}</span>
+                            <span>${price}</span>
                         </li>
                         <li>
                             <p>Discount</p>
-                            <span>${priceTotal - total}</span>
+                            <span>${price - total}</span>
                         </li>
                         <li>
                             <p>Discount %</p>

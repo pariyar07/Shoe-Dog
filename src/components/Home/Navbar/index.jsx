@@ -20,7 +20,7 @@ export function Navbar() {
                         (e) => {
                             filterDispatch({
                                 type: "FILTER_BY_SEARCH",
-                                payload: e.target.value
+                                payload: e.target.value.toLowerCase()
                             })
                         }
                     }/>

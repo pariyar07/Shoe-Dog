@@ -3,8 +3,7 @@ import { Rating } from 'components/common/cart-rating'
 import { useProducts } from 'contexts/product-context'
 
 export function ProductNavbar() {
-    const { state: {price}, filterState: { byRating, sort, categoryName, searchQuery, byPriceRange }, filterDispatch } = useProducts()
-    console.log(byRating, sort, categoryName, searchQuery, byPriceRange)
+    const { state: {price}, filterState: { byRating, sort }, filterDispatch } = useProducts()
     return (
         <>
             <aside className="aside-navbar">

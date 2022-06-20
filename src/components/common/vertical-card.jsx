@@ -1,34 +1,34 @@
 import React from 'react';
-import {useProducts} from 'contexts/product-context'
+import { useProducts } from 'contexts/product-context'
 
 export function VerticalCard() {
-    const {state: {wishlist}} = useProducts()
-    
+    const { state: { wishlist }, dispatch } = useProducts()
+
     return (
         <>
-        {wishlist.map((prod) => (
-            <div className="listing-card">
-                <img className="card-img vertical-card-img" src={prod.image} alt="shoe" /> 
-                <div className="wishlist-card-info">
-                    <div className="card-title">
-                        <div>
-                            <h3>{prod.name}</h3>
-                            <p className="card-description">{prod.info}</p>
+            {wishlist.map((product) => (
+                <div className="listing-card" key={product._id}>
+                    <img className="card-img vertical-card-img" src={product.image} alt="shoe" />
+                    <div className="wishlist-card-info">
+                        <div className="card-title">
+                            <div>
+                                <h3>{product.name}</h3>
+                                <p className="card-description">{product.info}</p>
+                            </div>
+                        </div>
+                        <div className="price">
+                            <p className="current-price">{product.price}</p>
+                            <p className="actual-price">{product.actualPrice}</p>
+                            <p className="discount-percentage">{product.discount}</p>
                         </div>
                     </div>
-                    <div className="price">
-                        <p className="current-price">{prod.price}</p>
-                        <p className="actual-price">{prod.actualPrice}</p>
-                        <p className="discount-percentage">{prod.discount}</p>
+                    <div className="bottom-btn cart">
+                        <button className="btn default add-cart" onClick={() => {
+                            dispatch({ type: "MOVE_TO_CART", payload: product })
+                        }}>Move to Cart</button>
                     </div>
                 </div>
-                <div className="bottom-btn cart">
-                    <button className="btn default add-cart">Move to Cart</button>
-                    {/* <button className="btn default remove-wishlist">Remove</button> */}
-                </div>
-            </div>
-        ))}
-            
+            ))}
         </>
     );
 }
