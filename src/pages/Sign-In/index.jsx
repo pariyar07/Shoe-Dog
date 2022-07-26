@@ -1,13 +1,18 @@
+import { useState } from "react";
 import { Navbar } from "fileModules";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "contexts/authContext";
+import useToast from "custom/useToast";
 
 export function SignIn() {
   const { setIsLoggedIn } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+  const { showToast } = useToast();
+  const [userEmail, setUserEmail] = useState();
+  const [password, setPassword] = useState();
 
   const handleGuestLogin = async (e) => {
     e.preventDefault();
@@ -17,11 +22,34 @@ export function SignIn() {
         password: "satyam123",
       });
       localStorage.setItem("token", response.data.encodedToken);
+      localStorage.setItem("user", JSON.stringify(response.data.foundUser));
+      setIsLoggedIn((isLoggedIn) => !isLoggedIn);
+      navigate(location?.state?.from?.pathname || "/", { replace: true });
+      showToast("Login Success", "success");
     } catch (error) {
-      console.log(error);
+      console.error(error);
+      showToast("Error! Try Again", "error");
     }
-    setIsLoggedIn((isLoggedIn) => !isLoggedIn);
-    navigate(location?.state?.from?.pathname || "/", { replace: true });
+  };
+
+  const handleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      let response = await axios.post("/api/auth/login", {
+        email: userEmail,
+        password: password,
+      });
+      localStorage.setItem("token", response.data.encodedToken);
+      localStorage.setItem("user", JSON.stringify(response.data.foundUser));
+      setIsLoggedIn((isLoggedIn) => !isLoggedIn);
+      navigate(location?.state?.from?.pathname || "/", { replace: true });
+      showToast("Login Success", "success");
+    } catch (error) {
+      console.error(error);
+      showToast("Error! Try Again", "error");
+    }
+    setUserEmail("");
+    setPassword("");
   };
 
   return (
@@ -39,11 +67,23 @@ export function SignIn() {
             <form id="form" className="form">
               <div className="form-control">
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" placeholder="Email" />
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Email"
+                  onChange={(e) => setUserEmail(e.target.value)}
+                  value={userEmail}
+                />
               </div>
               <div className="form-control">
                 <label htmlFor="password">Password</label>
-                <input type="password" id="password" placeholder="Password" />
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Password"
+                  onChange={(e) => setPassword(e.target.value)}
+                  value={password}
+                />
               </div>
               <div className="keep-signed">
                 <input type="checkbox" />
@@ -53,9 +93,9 @@ export function SignIn() {
                 <span className="guest-login" onClick={handleGuestLogin}>
                   Log in as Guest
                 </span>
-                <button id="sign-btn">Sign-In</button>
+                <button onClick={handleSignIn}>Sign-In</button>
                 <Link to="/signup">
-                  <button id="sign-btn">
+                  <button>
                     Sign-Up <i className="fas fa-chevron-right"></i>
                   </button>
                 </Link>

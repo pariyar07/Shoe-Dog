@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useProducts } from "contexts/product-context";
 import { useAuth } from "contexts/authContext";
+import useToast from "custom/useToast";
 
 export function Navbar() {
   const {
@@ -9,6 +10,12 @@ export function Navbar() {
     filterDispatch,
   } = useProducts();
   const { isLoggedIn, setIsLoggedIn } = useAuth();
+  const { showToast } = useToast();
+
+  const handleLogOut = () => {
+    setIsLoggedIn(false);
+    showToast("Successfully logged out", "success");
+  };
 
   return (
     <>
@@ -73,10 +80,7 @@ export function Navbar() {
               </button>
               <div className="dropdown-content">
                 {isLoggedIn ? (
-                  <button
-                    className="logout-btn"
-                    onClick={() => setIsLoggedIn(false)}
-                  >
+                  <button className="logout-btn" onClick={handleLogOut}>
                     Log Out
                   </button>
                 ) : (
